@@ -88,19 +88,45 @@ section h3 {
 }
 
 .participants ul {
-  list-style: disc;
-  margin: 0 0 0 18px;
+  list-style: none;
+  margin: 0;
   padding: 0;
 }
 
 .participants li {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background: #ffffff;
   border: 1px solid #eee;
   padding: 6px 10px;
   border-radius: 6px;
   margin-bottom: 8px;
   box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+}
+
+.participants li span {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.delete-participant {
+  background: none;
+  border: none;
+  color: #c62828;
+  font-size: 20px;
+  padding: 0 4px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: color 0.2s;
+  flex-shrink: 0;
+}
+
+.delete-participant:hover {
+  color: #e53935;
+  background-color: transparent;
 }
 
 /* Empty state */
